@@ -105,16 +105,16 @@ local Button = {
 
         -- check if the button is out of bounds anywhere
         if xMin < 1 then
-            error("button out of bounds: xMin=" .. xMin .. "<1", 2)
+            error("button '" .. name .. "' out of bounds left: xMin=" .. xMin .. "<1", 2)
         end
         if yMin < 1 then
-            error("button out of bounds: yMin=" .. yMin .. "<1", 2)
+            error("button  '" .. name .. "' out of bounds above: yMin=" .. yMin .. "<1", 2)
         end
         if xMax > x then
-            error("button out of bounds: xMax=" .. xMax .. ">x=" .. x, 2)
+            error("button  '" .. name .. "' out of bounds right: xMax=" .. xMax .. ">x=" .. x, 2)
         end
         if yMax > y then
-            error("button out of bounds: yMax=" .. yMax .. ">y=" .. y, 2)
+            error("button  '" .. name .. "' out of bounds below: yMax=" .. yMax .. ">y=" .. y, 2)
         end
 
         local offsetX, offsetY = self.mon.getPosition()
